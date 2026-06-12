@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Приглашение на свадьбу</title>
+    <meta name="description" content="Электронное приглашение на свадьбу" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Forum&family=Great+Vibes&family=Mulish:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <div class="sheet">
+        <section class="block block--hero">
+          <div class="hero__tag">
+            <span class="hero__tag-icon" aria-hidden="true">♥</span>
+            <span>Наша свадьба</span>
+          </div>
+          <h1 class="hero__title" id="namesTitle">МАКСИМ &amp; КСЕНИЯ</h1>
+          <p class="hero__subtitle">Приглашение на наш особенный день</p>
+          <div class="hero__date" id="dateBadge">
+            <span class="hero__date-icon" aria-hidden="true">📅</span>
+          </div>
+        </section>
+
+        <section class="block block--photo">
+          <div class="photo-card">
+            <img src="assets/картинка.jpg" alt="Пара на закате" />
+            <div class="photo-card__note">
+              <p class="photo-card__heading">Дорогие близкие и друзья!</p>
+              <p class="photo-card__text">
+                С огромным удовольствием приглашаем вас на нашу свадьбу! Мы будем счастливы разделить с вами этот особенный день.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="block block--timeline">
+          <img
+            class="timeline-image"
+            src="assets/тайминг.png"
+            alt="Тайминг дня"
+            width="476"
+            height="1200"
+          />
+        </section>
+
+        <section class="block block--place">
+          <h2 class="section-title">Место</h2>
+          <div class="places">
+            <div class="place-card">
+              <div class="place-card__top">
+                <div class="place-card__time" id="regTime">11:20</div>
+                <div class="place-card__label">регистрация</div>
+              </div>
+              <div class="place-card__name" id="regTitle">Дворец бракосочетания</div>
+              <p class="place-card__addr" id="regAddress">пр. Ленина, 11, Барнаул, Алтайский край, Россия, 656049</p>
+              <a class="btn" id="regMapBtn" href="#" target="_blank" rel="noreferrer">на карте</a>
+            </div>
+
+            <div class="place-card">
+              <div class="place-card__top">
+                <div class="place-card__time" id="banquetTime">16:30</div>
+                <div class="place-card__label">банкет</div>
+              </div>
+              <div class="place-card__name" id="banquetTitle">Ресторан «Мишель»</div>
+              <p class="place-card__addr" id="banquetAddress">проспект Ленина, 154а, к7 (ТК Геомаркет), Барнаул, 656037</p>
+              <a class="btn" id="banquetMapBtn" href="#" target="_blank" rel="noreferrer">на карте</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="block block--dresscode">
+          <h2 class="section-title">Дресс-код</h2>
+          <p class="text">
+            Для нас самое главное — ваше присутствие! Но мы будем очень рады, если вы поддержите цветовую палитру нашего торжества.
+          </p>
+          <div class="palette" id="palette" aria-label="Палитра дресс-кода"></div>
+          <p class="text text--small">
+            Спасибо за то, что помогаете сделать наш день особенно красивым.
+          </p>
+        </section>
+
+        <section class="block block--wishes">
+          <h2 class="section-title">Пожелания</h2>
+          <p class="text">
+            Просим вас воздержаться от криков «Горько!» и сохранить атмосферу уютного семейного торжества.
+          </p>
+          <p class="text">
+            Пожалуйста, оставьте малышей в надёжных руках на вечер нашего торжества.
+          </p>
+        </section>
+
+        <section class="block block--details">
+          <h2 class="section-title">Детали</h2>
+          <p class="text">
+            Пожалуйста, не дарите нам цветы — сразу после торжества мы отправляемся в путешествие и не успеем ими насладиться.
+          </p>
+          <p class="text">
+            Приятным комплиментом для нас вместо цветов будет бутылка вашего любимого алкоголя, которую мы откроем на ближайшем празднике.
+          </p>
+        </section>
+
+        <section class="block block--countdown">
+          <p class="countdown__heading">До торжества осталось</p>
+          <div class="countdown" id="countdown">
+            <div class="countdown__unit">
+              <div class="countdown__value" id="countdownDays">00</div>
+              <div class="countdown__label">дней</div>
+            </div>
+            <div class="countdown__unit">
+              <div class="countdown__value" id="countdownHours">00</div>
+              <div class="countdown__label">часов</div>
+            </div>
+            <div class="countdown__unit">
+              <div class="countdown__value" id="countdownMinutes">00</div>
+              <div class="countdown__label">минут</div>
+            </div>
+            <div class="countdown__unit">
+              <div class="countdown__value" id="countdownSeconds">00</div>
+              <div class="countdown__label">секунд</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="block block--rsvp">
+          <h2 class="section-title">Анкета</h2>
+          <p class="text">
+            Просим подтвердить своё присутствие до <span class="underline" id="rsvpDeadline">17.08.2026</span>.
+          </p>
+          <form class="rsvp-form" id="rsvpForm">
+            <div class="form-group">
+              <label for="fullName">Ваше имя и фамилия</label>
+              <input type="text" id="fullName" name="fullName" autocomplete="name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="phoneOrTelegram">Телефон</label>
+              <input type="text" id="phoneOrTelegram" name="phoneOrTelegram" autocomplete="tel" required />
+            </div>
+
+            <div class="form-group">
+              <label for="status">Сможете прийти?</label>
+              <select id="status" name="status" required>
+                <option value="" selected disabled>Выберите</option>
+                <option value="yes">Да, буду</option>
+                <option value="no">К сожалению, не смогу</option>
+              </select>
+            </div>
+
+            <div class="form-group" id="alcoholField">
+              <label>Предпочтения по алкоголю</label>
+              <div class="checks">
+                <label class="check"><input type="checkbox" name="alcoholChoices" value="wine_red" /> Красное вино</label>
+                <label class="check"><input type="checkbox" name="alcoholChoices" value="wine_white" /> Белое вино</label>
+                <label class="check"><input type="checkbox" name="alcoholChoices" value="strong_alcohol" /> Крепкий алкоголь</label>
+                <label class="check"><input type="checkbox" name="alcoholChoices" value="champagne" /> Шампанское</label>
+                <label class="check"><input type="checkbox" name="alcoholChoices" value="non_alcohol" /> Не употребляю алкоголь</label>
+              </div>
+            </div>
+
+            <div class="form-group" id="foodField">
+              <label for="foodNotes">Аллергия (если есть)</label>
+              <textarea id="foodNotes" name="foodNotes" rows="3"></textarea>
+            </div>
+
+            <div class="form-group" id="commentField">
+              <label for="comment">Комментарий</label>
+              <textarea id="comment" name="comment" rows="2"></textarea>
+            </div>
+
+            <button class="btn btn--primary" type="submit" id="rsvpSubmit">отправить</button>
+            <div class="status-message" id="rsvpNote" role="status" aria-live="polite"></div>
+          </form>
+        </section>
+
+        <section class="block block--contacts">
+          <h2 class="section-title">Контакты</h2>
+          <p class="text" id="contactLabel">
+            По всем вопросам вы можете связаться с нашим координатором
+          </p>
+          <p class="contacts__name" id="contactName"></p>
+          <a class="contacts__link" id="contact1" href="tel:+79132444848">+7 (913) 244-48-48</a>
+          <p class="footer__text">Ждём вас! С любовью, <span id="footerNames">Максим и Ксения</span></p>
+        </section>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

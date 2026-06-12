@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Приглашение на свадьбу</title>
+    <meta name="description" content="Электронное приглашение на свадьбу" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Caveat+Brush&family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <div class="sheet">
+        <section class="hero">
+          <div class="hero__text">
+            <div class="hero__tag">
+              <span class="hero__tag-icon">?</span>
+              <span>Наша свадьба</span>
+            </div>
+            <h1 class="hero__title" id="namesTitle">МАКСИМ &amp; КСЕНИЯ</h1>
+            <p class="hero__subtitle">Приглашение на наш особенный день</p>
+            <div class="hero__date" id="dateBadge"><span class="hero__date-icon">??</span></div>
+          </div>
+
+          <div class="hero__visual" aria-hidden="true">
+            <div class="hero__flowers"></div>
+            <div class="hero__rings"></div>
+          </div>
+        </section>
+
+        <section class="layout layout--top">
+          <article class="card card--place">
+            <div class="card__header">
+              <span class="card__label">Место</span>
+              <h2 class="card__title">Место</h2>
+            </div>
+            <div class="place-group">
+              <div class="place-item">
+                <div class="place-item__left">
+                  <div class="place-item__time" id="regTime">11:20</div>
+                  <div class="place-item__label">регистрация</div>
+                </div>
+                <div class="place-item__info">
+                  <div class="place-item__name" id="regTitle">Дворец бракосочетания</div>
+                  <div class="place-item__address" id="regAddress">пр. Ленина, 11, Барнаул, Алтайский край, Россия, 656049</div>
+                  <a class="btn btn--ghost" id="regMapBtn" href="#" target="_blank" rel="noreferrer">на карте</a>
+                </div>
+              </div>
+
+              <div class="place-item">
+                <div class="place-item__left">
+                  <div class="place-item__time" id="banquetTime">16:30</div>
+                  <div class="place-item__label">банкет</div>
+                </div>
+                <div class="place-item__info">
+                  <div class="place-item__name" id="banquetTitle">Ресторан «Мишель»</div>
+                  <div class="place-item__address" id="banquetAddress">проспект Ленина, 154а, к7 (ТК Геомаркет), Барнаул, 656037</div>
+                  <a class="btn btn--ghost" id="banquetMapBtn" href="#" target="_blank" rel="noreferrer">на карте</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card card--wishes">
+            <div class="card__header">
+              <span class="card__label">Пожелания</span>
+              <h2 class="card__title">Пожелания</h2>
+            </div>
+            <p class="card__text">
+              Просим вас воздержаться от криков «Горько!» и сохранить атмосферу уютного семейного торжества.
+            </p>
+            <p class="card__text">
+              Пожалуйста, оставьте малышей в надёжных руках на вечер нашего торжества.
+            </p>
+          </article>
+
+          <article class="card card--timeline">
+            <div class="card__header">
+              <span class="card__label">Тайминг дня</span>
+              <h2 class="card__title">Тайминг дня</h2>
+            </div>
+            <ul class="timeline" id="timeline"></ul>
+          </article>
+        </section>
+
+        <section class="layout layout--middle">
+          <article class="card card--dresscode">
+            <div class="card__header">
+              <span class="card__label">Дресс?код</span>
+              <h2 class="card__title">Дресс?код</h2>
+            </div>
+            <p class="card__text">
+              Для нас самое главное — ваше присутствие! Но мы будем очень рады, если вы поддержите цветовую палитру нашего торжества.
+            </p>
+            <div class="palette" id="palette" aria-label="Палитра дресс-кода"></div>
+            <p class="card__text card__text--small">
+              Спасибо за то, что помогаете сделать наш день особенно красивым.
+            </p>
+          </article>
+
+          <article class="card card--details">
+            <div class="card__header">
+              <span class="card__label">Детали</span>
+              <h2 class="card__title">Детали</h2>
+            </div>
+            <p class="card__text">
+              Пожалуйста, не дарите нам цветы — сразу после торжества мы отправляемся в путешествие и не успеем ими насладиться.
+            </p>
+            <p class="card__text">
+              Приятным комплиментом для нас вместо цветов будет бутылка вашего любимого алкоголя, которую мы откроем на ближайшем празднике.
+            </p>
+          </article>
+
+          <article class="card card--photo">
+            <div class="photo-card">
+              <img src="assets/photo_5258380576085974327_y.jpg" alt="Пара на закате" />
+              <div class="photo-card__note">
+                <p class="photo-card__heading">Дорогие близкие и друзья!</p>
+                <p class="photo-card__text">
+                  С огромным удовольствием приглашаем вас на нашу свадьбу! Мы будем счастливы разделить с вами этот особенный день.
+                </p>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section class="card countdown-card">
+          <div class="countdown-card__top">
+            <span class="countdown-card__label">До торжества осталось</span>
+          </div>
+          <div class="countdown" id="countdown">
+            <div class="countdown__unit">
+              <div class="countdown__value" id="countdownDays">00</div>
+              <div class="countdown__label">дней</div>
+            </div>
+            <div class="countdown__unit">
+              <div class="countdown__value" id="countdownHours">00</div>
+              <div class="countdown__label">часов</div>
+            </div>
+            <div class="countdown__unit">
+              <div class="countdown__value" id="countdownMinutes">00</div>
+              <div class="countdown__label">минут</div>
+            </div>
+            <div class="countdown__unit">
+              <div class="countdown__value" id="countdownSeconds">00</div>
+              <div class="countdown__label">секунд</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="layout layout--bottom">
+          <article class="card card--rsvp">
+            <div class="card__header">
+              <span class="card__label">Анкета</span>
+              <h2 class="card__title">Анкета</h2>
+            </div>
+            <p class="card__text">
+              Просим подтвердить своё присутствие до <span class="underline" id="rsvpDeadline">17.08.2026</span>.
+            </p>
+            <form class="rsvp-form" id="rsvpForm">
+              <div class="form-group">
+                <label for="fullName">Ваше имя и фамилия</label>
+                <input type="text" id="fullName" name="fullName" autocomplete="name" required />
+              </div>
+
+              <div class="form-group">
+                <label for="phoneOrTelegram">Телефон</label>
+                <input type="text" id="phoneOrTelegram" name="phoneOrTelegram" autocomplete="tel" required />
+              </div>
+
+              <div class="form-group">
+                <label for="status">Сможете прийти?</label>
+                <select id="status" name="status" required>
+                  <option value="" selected disabled>Выберите</option>
+                  <option value="yes">Да, буду</option>
+                  <option value="no">К сожалению, не смогу</option>
+                </select>
+              </div>
+
+              <div class="form-group" id="alcoholField">
+                <label>Предпочтения по алкоголю</label>
+                <div class="checks">
+                  <label class="check"><input type="checkbox" name="alcoholChoices" value="wine_red" /> Красное вино</label>
+                  <label class="check"><input type="checkbox" name="alcoholChoices" value="wine_white" /> Белое вино</label>
+                  <label class="check"><input type="checkbox" name="alcoholChoices" value="strong_alcohol" /> Крепкий алкоголь</label>
+                  <label class="check"><input type="checkbox" name="alcoholChoices" value="champagne" /> Шампанское</label>
+                  <label class="check"><input type="checkbox" name="alcoholChoices" value="non_alcohol" /> Не употребляю алкоголь</label>
+                </div>
+              </div>
+
+              <div class="form-group" id="foodField">
+                <label for="foodNotes">Аллергия (если есть)</label>
+                <textarea id="foodNotes" name="foodNotes" rows="3"></textarea>
+              </div>
+
+              <div class="form-group" id="commentField">
+                <label for="comment">Комментарий</label>
+                <textarea id="comment" name="comment" rows="2"></textarea>
+              </div>
+
+              <button class="btn btn--primary" type="submit" id="rsvpSubmit">отправить</button>
+              <div class="status-message" id="rsvpNote" role="status" aria-live="polite"></div>
+            </form>
+          </article>
+
+          <article class="card card--contacts">
+            <div class="card__header">
+              <span class="card__label">Контакты</span>
+              <h2 class="card__title">Контакты</h2>
+            </div>
+            <p class="card__text">
+              По всем вопросам вы можете связаться с нашим координатором
+            </p>
+            <a class="contacts__link" id="contact1" href="tel:+79132444848">+7 (913) 244?48?48</a>
+            <p class="card__footer">Ждём вас! С любовью, <span id="footerNames">Максим и Ксения</span></p>
+          </article>
+        </section>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

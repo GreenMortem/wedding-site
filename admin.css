@@ -1,0 +1,115 @@
+:root{
+  --admin-max: 1120px;
+}
+
+.admin-page{
+  width: min(var(--admin-max), 100%);
+}
+
+.admin-sheet{
+  padding:18px 18px 20px;
+}
+
+.admin-title{
+  font-size:54px;
+}
+
+.admin-actions{
+  display:grid;
+  gap:14px;
+}
+
+.admin-filters{
+  display:grid;
+  gap:10px;
+  grid-template-columns:1fr;
+}
+
+.admin-buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.admin-table-wrap{
+  overflow:auto;
+  border-radius:16px;
+  border:1px solid rgba(0,0,0,.08);
+  background:rgba(255,255,255,.55);
+}
+
+.admin-table{
+  width:100%;
+  border-collapse:separate;
+  border-spacing:0;
+  min-width:980px;
+}
+
+.admin-table th,
+.admin-table td{
+  text-align:left;
+  padding:10px 10px;
+  border-bottom:1px dashed rgba(61,75,47,.18);
+  vertical-align:top;
+  font-size:13px;
+  color:rgba(0,0,0,.78);
+}
+
+.admin-table th{
+  position:sticky;
+  top:0;
+  background:rgba(251,248,241,.92);
+  backdrop-filter: blur(6px);
+  z-index:1;
+  font-weight:600;
+  letter-spacing:.2px;
+  color:rgba(0,0,0,.7);
+}
+
+.admin-table tr:last-child td{border-bottom:none}
+
+.pill{
+  display:inline-flex;
+  align-items:center;
+  padding:4px 10px;
+  border-radius:999px;
+  border:1px solid rgba(0,0,0,.10);
+  background:rgba(0,0,0,.03);
+  font-weight:600;
+  font-size:12px;
+  white-space:nowrap;
+}
+.pill[data-variant="yes"]{
+  background:rgba(61,75,47,.10);
+  border-color:rgba(61,75,47,.18);
+  color:rgba(61,75,47,.95);
+}
+.pill[data-variant="no"]{
+  background:rgba(136,38,38,.10);
+  border-color:rgba(136,38,38,.22);
+  color:rgba(136,38,38,.95);
+}
+
+.icon-btn{
+  border:1px solid rgba(0,0,0,.12);
+  background:transparent;
+  border-radius:12px;
+  padding:8px 10px;
+  cursor:pointer;
+  color:rgba(0,0,0,.70);
+}
+.icon-btn:hover{background:rgba(0,0,0,.03)}
+.icon-btn:active{transform:scale(.98)}
+
+@media (min-width: 760px){
+  .admin-title{font-size:62px}
+  .admin-actions{
+    grid-template-columns:1fr auto;
+    align-items:end;
+  }
+  .admin-filters{
+    grid-template-columns:1fr 180px;
+    align-items:end;
+  }
+}
+

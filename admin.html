@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RSVP — админ</title>
+    <meta name="robots" content="noindex,nofollow" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Montserrat:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body>
+    <main class="page admin-page">
+      <div class="sheet admin-sheet">
+        <section class="block">
+          <h1 class="title admin-title">RSVP</h1>
+          <p class="p muted">Админ‑панель ответов гостей.</p>
+        </section>
+
+        <section class="block" id="loginSection">
+          <h2 class="h2">Вход</h2>
+          <form class="form" id="loginForm">
+            <label class="field">
+              <span class="field__label">Код доступа</span>
+              <input class="input" type="password" name="code" autocomplete="current-password" required />
+            </label>
+            <button class="btn btn--primary" type="submit" id="loginBtn">войти</button>
+            <div class="form-note" id="loginNote" role="status" aria-live="polite"></div>
+          </form>
+        </section>
+
+        <section class="block" id="panelSection" hidden>
+          <div class="admin-actions">
+            <div class="admin-filters">
+              <label class="field">
+                <span class="field__label">Поиск</span>
+                <input class="input" id="searchInput" placeholder="имя, телефон, telegram" />
+              </label>
+              <label class="field">
+                <span class="field__label">Фильтр</span>
+                <select class="input" id="statusFilter">
+                  <option value="all" selected>все</option>
+                  <option value="yes">придут</option>
+                  <option value="no">не придут</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="admin-buttons">
+              <button class="btn" type="button" id="refreshBtn">обновить</button>
+              <button class="btn" type="button" id="csvBtn">скачать CSV</button>
+              <button class="btn" type="button" id="logoutBtn">выйти</button>
+            </div>
+          </div>
+
+          <div class="admin-table-wrap" role="region" aria-label="Таблица ответов">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>дата</th>
+                  <th>имя</th>
+                  <th>контакт</th>
+                  <th>статус</th>
+                  <th>гостей</th>
+                  <th>+1</th>
+                  <th>алкоголь</th>
+                  <th>еда/аллергии</th>
+                  <th>комментарий</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="rows"></tbody>
+            </table>
+          </div>
+
+          <div class="form-note" id="panelNote" role="status" aria-live="polite"></div>
+        </section>
+      </div>
+    </main>
+
+    <script src="admin.js"></script>
+  </body>
+</html>
+
