@@ -412,7 +412,6 @@ body {
   padding: 18px 16px;
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.96);
-  border: 1px solid rgba(61, 75, 47, 0.1);
 }
 
 .photo-card__heading {
