@@ -129,11 +129,8 @@ function validateRsvpInput(input) {
   const allowedAlcohol = new Set([
     "wine_red",
     "wine_white",
+    "strong_alcohol",
     "champagne",
-    "vodka",
-    "whiskey",
-    "cognac",
-    "beer",
     "non_alcohol",
   ]);
 
