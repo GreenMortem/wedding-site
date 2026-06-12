@@ -407,10 +407,8 @@ body {
 }
 
 .photo-card__note {
-  position: absolute;
-  left: 18px;
-  right: 18px;
-  bottom: 18px;
+  position: static;
+  margin-top: 18px;
   padding: 18px 16px;
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.96);
