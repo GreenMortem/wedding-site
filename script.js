@@ -1,15 +1,15 @@
 
 const DRESSCODE_IMAGES = [
-  "assets/dres1.png",
-  "assets/dres2.png",
-  "assets/dres3.png",
-  "assets/dres4.png",
-  "assets/dres5.png",
-  "assets/dres6.png",
-  "assets/dres7.png",
-  "assets/dres8.png",
-  "assets/dres9.png",
-  "assets/dres10.png",
+  "assets/dres1.jpg",
+  "assets/dres2.jpg",
+  "assets/dres3.jpg",
+  "assets/dres4.jpg",
+  "assets/dres5.jpg",
+  "assets/dres6.jpg",
+  "assets/dres7.jpg",
+  "assets/dres8.jpg",
+  "assets/dres9.jpg",
+  "assets/dres10.jpg",
 ];
 
 function createDresscodeSwatch(src) {
