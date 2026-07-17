@@ -111,8 +111,8 @@ body {
 /* Hero */
 .block--hero {
   background:
-    linear-gradient(rgba(249, 241, 235, 0.72), rgba(249, 241, 235, 0.72)),
-    var(--page-bg);
+          linear-gradient(rgba(249, 241, 235, 0.72), rgba(249, 241, 235, 0.72)),
+          var(--page-bg);
   text-align: center;
   padding-top: 36px;
   padding-bottom: 24px;
@@ -152,9 +152,9 @@ body {
   height: 180px;
   opacity: 0.55;
   background:
-    radial-gradient(circle at 30% 40%, rgba(183, 143, 84, 0.35), transparent 55%),
-    radial-gradient(circle at 70% 60%, rgba(61, 75, 47, 0.2), transparent 50%),
-    radial-gradient(circle at 50% 50%, rgba(216, 195, 106, 0.25), transparent 60%);
+          radial-gradient(circle at 30% 40%, rgba(183, 143, 84, 0.35), transparent 55%),
+          radial-gradient(circle at 70% 60%, rgba(61, 75, 47, 0.2), transparent 50%),
+          radial-gradient(circle at 50% 50%, rgba(216, 195, 106, 0.25), transparent 60%);
   filter: blur(1px);
 }
 
@@ -356,8 +356,9 @@ body {
 .palette {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 12px;
-  margin: 18px 0 14px;
+  gap: 14px;
+  margin: 20px 0 16px;
+  justify-items: center;
 }
 
 .block--dresscode::before {
@@ -371,23 +372,30 @@ body {
 }
 
 .swatch {
-  width: 100%;
-  aspect-ratio: 1;
-  display: block;
+  width: 108px;
+  height: 108px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
   border-radius: 50%;
-  border: 2px solid rgba(255, 255, 255, 0.9);
+  border: 5px solid rgba(255, 255, 255, 0.95);
   box-shadow:
-    inset 0 0 0 1px rgba(255, 255, 255, 0.35),
-    0 8px 20px rgba(65, 47, 25, 0.12);
-  background-color: transparent;
+          0 6px 16px rgba(0, 0, 0, 0.12),
+          inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+  background: #fff;
+  transition: transform 0.2s ease;
+}
+
+.swatch:hover {
+  transform: scale(1.06);
 }
 
 .swatch__image {
   width: 100%;
   height: 100%;
-  display: block;
   object-fit: cover;
+  display: block;
 }
 
 /* Photo */
@@ -630,6 +638,12 @@ body {
 }
 
 @media (max-width: 600px) {
+  .swatch {
+    width: 92px;
+    height: 92px;
+    border-width: 4px;
+  }
+
   :root {
     --sheet-pad-x: 16px;
   }
@@ -690,8 +704,7 @@ body {
   }
 
   .palette {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    gap: 8px;
+    gap: 10px;
   }
 
   .countdown {

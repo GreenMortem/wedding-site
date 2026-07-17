@@ -1,22 +1,44 @@
-// Текстуры дресс-кода (как на вашем примере).
-// В проекте ожидается файл: wedding-site-template/assets/dresscode.jpg
-const DRESSCODE_SPRITE_URL = "assets/dresscode.jpg";
 
-// Центры и радиус кружков в dresscode.jpg (оригинал 1280x720).
-// Из каждого круга вырезается отдельный фрагмент, чтобы на сайте
-// каждый свотч показывал свой собственный кружок, а не весь спрайт.
-const DRESSCODE_CROPS = [
-  { x: 231, y: 260, r: 98 },
-  { x: 437, y: 260, r: 98 },
-  { x: 644, y: 260, r: 98 },
-  { x: 860, y: 260, r: 98 },
-  { x: 1067, y: 260, r: 98 },
-  { x: 231, y: 476, r: 98 },
-  { x: 437, y: 476, r: 98 },
-  { x: 644, y: 476, r: 98 },
-  { x: 860, y: 476, r: 98 },
-  { x: 1067, y: 476, r: 98 },
+const DRESSCODE_IMAGES = [
+  "assets/dres1.png",
+  "assets/dres2.png",
+  "assets/dres3.png",
+  "assets/dres4.png",
+  "assets/dres5.png",
+  "assets/dres6.png",
+  "assets/dres7.png",
+  "assets/dres8.png",
+  "assets/dres9.png",
+  "assets/dres10.png",
 ];
+
+function createDresscodeSwatch(src) {
+  const sw = document.createElement("div");
+  sw.className = "swatch";
+  sw.title = "дресс-код";
+
+  const img = document.createElement("img");
+  img.className = "swatch__image";
+  img.src = src;
+  img.alt = "";
+  img.loading = "lazy";           // важно для производительности
+  img.decoding = "async";
+
+  sw.appendChild(img);
+  return sw;
+}
+
+async function renderPalette() {
+  const root = $("#palette");
+  if (!root) return;
+  root.innerHTML = "";
+
+  // Пробуем загрузить отдельные картинки
+  for (const src of DRESSCODE_IMAGES) {
+    const sw = createDresscodeSwatch(src);
+    root.appendChild(sw);
+  }
+}
 
 // Настройки сайта — заполните под вашу свадьбу
 const CONFIG = {
@@ -90,86 +112,6 @@ function setLinkPhone(sel, { phoneText, phoneHref }) {
   if (!el) return;
   el.textContent = phoneText;
   el.href = `tel:${phoneHref}`;
-}
-
-function loadImage(src) {
-  return new Promise((resolve, reject) => {
-    const img = new Image();
-    img.onload = () => resolve(img);
-    img.onerror = () => reject(new Error(`Не удалось загрузить изображение: ${src}`));
-    img.src = src;
-  });
-}
-
-function createDresscodeSwatch(image, crop) {
-  const size = 220;
-  const canvas = document.createElement("canvas");
-  canvas.width = size;
-  canvas.height = size;
-
-  const ctx = canvas.getContext("2d");
-  if (!ctx) return null;
-
-  ctx.beginPath();
-  ctx.arc(size / 2, size / 2, size / 2, 0, Math.PI * 2);
-  ctx.closePath();
-  ctx.clip();
-
-  ctx.drawImage(
-    image,
-    crop.x - crop.r,
-    crop.y - crop.r,
-    crop.r * 2,
-    crop.r * 2,
-    0,
-    0,
-    size,
-    size,
-  );
-
-  const sw = document.createElement("div");
-  sw.className = "swatch";
-  sw.title = "дресс-код";
-
-  const img = document.createElement("img");
-  img.className = "swatch__image";
-  img.src = canvas.toDataURL("image/png");
-  img.alt = "";
-  img.decoding = "async";
-  sw.appendChild(img);
-
-  return sw;
-}
-
-async function renderPalette() {
-  const root = $("#palette");
-  if (!root) return;
-  root.innerHTML = "";
-
-  const hasSprite = !!DRESSCODE_SPRITE_URL;
-  if (hasSprite) {
-    try {
-      const image = await loadImage(DRESSCODE_SPRITE_URL);
-
-      for (const crop of DRESSCODE_CROPS) {
-        const sw = createDresscodeSwatch(image, crop);
-        if (sw) root.appendChild(sw);
-      }
-
-      if (root.childElementCount > 0) return;
-    } catch {
-      // Если картинка не загрузилась, ниже отрисуем простой цветовой фолбэк.
-    }
-  }
-
-  // Фолбэк — просто цвета (если по какой-то причине спрайт не задан)
-  for (const color of CONFIG.dressCodePalette) {
-    const sw = document.createElement("div");
-    sw.className = "swatch";
-    sw.style.backgroundColor = color;
-    sw.title = color;
-    root.appendChild(sw);
-  }
 }
 
 function getTimelineIcon(type) {
