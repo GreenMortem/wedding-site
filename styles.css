@@ -111,8 +111,8 @@ body {
 /* Hero */
 .block--hero {
   background:
-          linear-gradient(rgba(249, 241, 235, 0.72), rgba(249, 241, 235, 0.72)),
-          var(--page-bg);
+    linear-gradient(rgba(249, 241, 235, 0.72), rgba(249, 241, 235, 0.72)),
+    var(--page-bg);
   text-align: center;
   padding-top: 36px;
   padding-bottom: 24px;
@@ -152,9 +152,9 @@ body {
   height: 180px;
   opacity: 0.55;
   background:
-          radial-gradient(circle at 30% 40%, rgba(183, 143, 84, 0.35), transparent 55%),
-          radial-gradient(circle at 70% 60%, rgba(61, 75, 47, 0.2), transparent 50%),
-          radial-gradient(circle at 50% 50%, rgba(216, 195, 106, 0.25), transparent 60%);
+    radial-gradient(circle at 30% 40%, rgba(183, 143, 84, 0.35), transparent 55%),
+    radial-gradient(circle at 70% 60%, rgba(61, 75, 47, 0.2), transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(216, 195, 106, 0.25), transparent 60%);
   filter: blur(1px);
 }
 
@@ -352,7 +352,6 @@ body {
   display: block;
 }
 
-/* Dresscode — кружки из assets/dresscode.jpg */
 .palette {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -385,10 +384,6 @@ body {
           inset 0 0 0 1px rgba(255, 255, 255, 0.6);
   background: #fff;
   transition: transform 0.2s ease;
-}
-
-.swatch:hover {
-  transform: scale(1.06);
 }
 
 .swatch__image {
@@ -643,7 +638,6 @@ body {
     height: 92px;
     border-width: 4px;
   }
-
   :root {
     --sheet-pad-x: 16px;
   }
